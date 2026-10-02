@@ -118,7 +118,7 @@ $$H = \frac{1}{\sqrt{2}}\begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix}$$
   - When multiple gates act in parallel on distinct wires (qubits) at the same time step, the overall global operator is given by the tensor product of the individual gates.
     - *To be more specific*: When two single-qubit gates $A$ and $B$ are applied concurrently across separate wires, they operate independently and simultaneously. Then the overall unitary transformation of the joint state space is defined by the tensor product $A \otimes B$.
   
-   ![alt text](image-1.png) 
+   ![Qubit Bases](../assets/img/image-1.png) 
  
   
 - The controlled-NOT gate: 
@@ -127,7 +127,7 @@ $$H = \frac{1}{\sqrt{2}}\begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix}$$
   ![Qubit Bases](../assets/img/quantum_NoT.jpg)
   ![Qubit Bases](../assets/img/quantum_circuit.jpg)
 ### 3.2. Application in Circuit Reading Comprehension:
-![alt text](image-4.png)
+![Qubit Bases](../assets/img/image-4.png)
 - Initial state: 
   $$|\Psi_{\text{in}}\rangle = |\varphi\rangle \otimes |+\rangle \otimes |0\rangle \otimes |0\rangle \otimes |\psi\rangle \equiv |\varphi\rangle |+\rangle |00\rangle |\psi\rangle$$
 - Time step 1:
@@ -264,7 +264,7 @@ $$|\psi\rangle_{AB} = |\psi_1\rangle_A \otimes |\psi_2\rangle_B$$
 control is 1. 
   - As an explicit example, the Hadamard gate takes the input $|00\rangle$ to $(|0\rangle + |1\rangle)|0\rangle / \sqrt{2}$. Then pass the composite system through a CNOT gate, where Qubit 1 acts as the *Control qubit* and Qubit 2 acts as the *Target qubit*, and then the CNOT gives the output state  $(|00\rangle + |11\rangle) / \sqrt{2}$
 
-![alt text](image-5.png)
+![Qubit Bases](../assets/img/image-5.png)
 - Bell basic:
   $$\left\{ \underbrace{\frac{1}{\sqrt{2}}(|00\rangle + |11\rangle)}_{|\Psi_{00}\rangle \text{/EPR pair}}, \underbrace{\frac{1}{\sqrt{2}}(|00\rangle - |11\rangle)}_{|\Psi_{01}\rangle}, \underbrace{\frac{1}{\sqrt{2}}(|01\rangle + |10\rangle)}_{|\Psi_{10}\rangle}, \underbrace{\frac{1}{\sqrt{2}}(|01\rangle - |10\rangle)}_{|\Psi_{11}\rangle} \right\}$$
 - Spooky action at a distance:
@@ -274,7 +274,7 @@ also gets bit 𝑏.
 ### 5.2. Quantum teleportation:
 - Alice and Bob share a pair of entangled qubits (an **EPR pair**), after which they separate and are located spatially distant from each other. Alice's task is to transmit an unknown qubit state $|\psi\rangle = \alpha|0\rangle + \beta|1\rangle$ to Bob, but she can only transmit **classical information** (ordinary classical bits 0 and 1).
 - **Quantum teleportation** resolves this dilemma by utilizing the shared entangled EPR pair as a resource, combined with a minimal amount of classical communication.
-  ![alt text](image-6.png)
+  ![Qubit Bases](../assets/img/image-6.png)
 $$|\psi_0\rangle = |\psi\rangle|\beta_{00}\rangle$$
 
 $$= \frac{1}{\sqrt{2}} \left[ \alpha|0\rangle(|00\rangle + |11\rangle) + \beta|1\rangle(|00\rangle + |11\rangle) \right]$$
