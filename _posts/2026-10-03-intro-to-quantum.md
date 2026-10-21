@@ -66,11 +66,11 @@ $$A \otimes B \equiv \left. \overbrace{\begin{bmatrix} A_{11}B & A_{12}B & \dots
 
 With $n$ qubits:
 
-$$\mathcal{H}_{\text{$n$-qubits}} = \mathcal{H}_1 \otimes \mathcal{H}_2 \otimes \dots \otimes \mathcal{H}_n$$
+$$\mathcal{H}_{\text{n-qubits}} = \mathcal{H}_1 \otimes \mathcal{H}_2 \otimes \dots \otimes \mathcal{H}_n$$
 
-$$\implies \text{Dim}(\mathcal{H}_{\text{$n$-qubits}}) = \text{Dim}(\mathcal{H}_1) \times \text{Dim}(\mathcal{H}_2) \times \dots \times \text{Dim}(\mathcal{H}_n)$$
+$$\implies \text{Dim}(\mathcal{H}_{\text{n-qubits}}) = \text{Dim}(\mathcal{H}_1) \times \text{Dim}(\mathcal{H}_2) \times \dots \times \text{Dim}(\mathcal{H}_n)$$
 
-$$\implies \text{Dim}(\mathcal{H}_{\text{$n$-qubits}}) = \text{Dim}(\mathbb{C}^2) \times \text{Dim}(\mathbb{C}^2) \times \dots \times \text{Dim}(\mathbb{C}^2)$$
+$$\implies \text{Dim}(\mathcal{H}_{\text{n-qubits}}) = \text{Dim}(\mathbb{C}^2) \times \text{Dim}(\mathbb{C}^2) \times \dots \times \text{Dim}(\mathbb{C}^2)$$
 
 $$= \underbrace{2 \times 2 \times \dots \times 2}_{n \text{ times}} = 2^n$$
 
@@ -91,34 +91,35 @@ $$i\hbar \frac{\partial}{\partial t} \vert{}\psi\rangle = \hat{H}\vert{}\psi\ran
 $$U U^\dagger = U^\dagger U = I \quad \implies \quad U^\dagger = U^{-1}$$
 
 ### 2.2. Quantum Unitaries
+
 #### Unitary Operator in Probability Conservation
 
-Consider an $N$- dimensional Hilbert space $\mathcal{H}$ with *Arbitrary orthonormal basis* $\{|e_1\rangle, |e_2\rangle, \dots, |e_N\rangle\}$ satisfying *Completeness relation:* $\sum_{i=1}^{N} |e_i\rangle\langle e_i| = I$.
+Consider an $N$-dimensional Hilbert space $\mathcal{H}$ with *Arbitrary orthonormal basis* $\{\vert{}e_1\rangle, \vert{}e_2\rangle, \dots, \vert{}e_N\rangle\}$ satisfying *Completeness relation:* $\sum_{i=1}^{N} \vert{}e_i\rangle\langle e_i\vert{} = I$.
 
-Representation of an arbitrary state vector $|\psi\rangle \in \mathcal{H}$ with the probability of obtaining outcome $i$ when measuring in the basis $\{|e_i\rangle\}$ is $p(i) = |c_i|^2$.
+Representation of an arbitrary state vector $\vert{}\psi\rangle \in \mathcal{H}$ with the probability of obtaining outcome $i$ when measuring in the basis $\{\vert{}e_i\rangle\}$ is $p(i) = \vert{}c_i\vert{}^2$.
 
-$$|\psi\rangle = \sum_{i=1}^{N} c_i |e_i\rangle \quad (c_i \in \mathbb{C})$$
+$$\vert{}\psi\rangle = \sum_{i=1}^{N} c_i \vert{}e_i\rangle \quad (c_i \in \mathbb{C})$$
 
-*Calculation of the norm squared* $\langle\psi|\psi\rangle$:
+*Calculation of the norm squared* $\langle\psi\vert{}\psi\rangle$:
 
-$$\langle\psi|\psi\rangle = \left(\sum_{i=1}^{N} c_i^* \langle e_i|\right) \left(\sum_{j=1}^{N} c_j |e_j\rangle\right) = \sum_{i=1}^{N} \sum_{j=1}^{N} c_i^* c_j \underbrace{\langle e_i | e_j \rangle}_{\delta_{ij}}$$
+$$\langle\psi\vert{}\psi\rangle = \left(\sum_{i=1}^{N} c_i^* \langle e_i\vert{}\right) \left(\sum_{j=1}^{N} c_j \vert{}e_j\rangle\right) = \sum_{i=1}^{N} \sum_{j=1}^{N} c_i^* c_j \underbrace{\langle e_i \vert{} e_j \rangle}_{\delta_{ij}}$$
 
-$$\langle\psi|\psi\rangle = \sum_{i=1}^{N} c_i^* c_i = \sum_{i=1}^{N} |c_i|^2 = \sum_{i=1}^{N} p(i) = 1$$
-
-
+$$\langle\psi\vert{}\psi\rangle = \sum_{i=1}^{N} c_i^* c_i = \sum_{i=1}^{N} \vert{}c_i\vert{}^2 = \sum_{i=1}^{N} p(i) = 1$$
 
 *Consider an $N \times N$ unitary operator $U$ satisfying $U^\dagger U = U U^\dagger = I$.*
 
-When $U$ acts on the state $|\psi\rangle$, the system transitions to a new state $|\psi'\rangle = U|\psi\rangle$.
+When $U$ acts on the state $\vert{}\psi\rangle$, the system transitions to a new state $\vert{}\psi'\rangle = U\vert{}\psi\rangle$.
 
-Expressing $|\psi'\rangle$ in the same basis $\{|e_i\rangle\}$ as $|\psi'\rangle = \sum_{i=1}^{N} c'_i |e_i\rangle$:
+Expressing $\vert{}\psi'\rangle$ in the same basis $\{\vert{}e_i\rangle\}$ as $\vert{}\psi'\rangle = \sum_{i=1}^{N} c'_i \vert{}e_i\rangle$:
 
-$$\langle\psi'|\psi'\rangle = (U|\psi\rangle)^\dagger (U|\psi\rangle) = \langle\psi| U^\dagger U |\psi\rangle = \langle\psi| I |\psi\rangle = \langle\psi|\psi\rangle = 1$$
+$$\langle\psi'\vert{}\psi'\rangle = (U\vert{}\psi\rangle)^\dagger (U\vert{}\psi\rangle) = \langle\psi\vert{} U^\dagger U \vert{}\psi\rangle = \langle\psi\vert{} I \vert{}\psi\rangle = \langle\psi\vert{}\psi\rangle = 1$$
+
 #### Unitary operator in Reversibility & Information Conservation
 
 For a unitary matrix, we always have $U^{-1} = U^\dagger$. This guarantees that all quantum gates (such as $X$, $Z$, and $H$) are fully reversible without any loss of information:
 
-$$U^\dagger(U|\psi\rangle) = (U^\dagger U)|\psi\rangle = I|\psi\rangle = |\psi\rangle$$
+$$U^\dagger(U\vert{}\psi\rangle) = (U^\dagger U)\vert{}\psi\rangle = I\vert{}\psi\rangle = \vert{}\psi\rangle$$
+
 #### 2.2.1. Pauli-X Gate (Bit-Flip)
 
 The $X$ gate acts as the quantum NOT operation in the computational basis, flipping $\vert{}0\rangle \leftrightarrow \vert{}1\rangle$:
@@ -138,9 +139,11 @@ $$Z = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}$$
 Action on basis states:
 
 $$Z\vert{}0\rangle = \vert{}0\rangle \quad \text{and} \quad Z\vert{}1\rangle = -\vert{}1\rangle$$
-$$Z|+\rangle = Z \left( \frac{|0\rangle + |1\rangle}{\sqrt{2}} \right) = \frac{Z|0\rangle + Z|1\rangle}{\sqrt{2}} = \frac{|0\rangle - |1\rangle}{\sqrt{2}} = |-\rangle$$
 
-$$Z|-\rangle = Z \left( \frac{|0\rangle - |1\rangle}{\sqrt{2}} \right) = \frac{Z|0\rangle - Z|1\rangle}{\sqrt{2}} = \frac{|0\rangle - (-|1\rangle)}{\sqrt{2}} = \frac{|0\rangle + |1\rangle}{\sqrt{2}} = |+\rangle$$
+$$Z\vert{}+\rangle = Z \left( \frac{\vert{}0\rangle + \vert{}1\rangle}{\sqrt{2}} \right) = \frac{Z\vert{}0\rangle + Z\vert{}1\rangle}{\sqrt{2}} = \frac{\vert{}0\rangle - \vert{}1\rangle}{\sqrt{2}} = \vert{}-\rangle$$
+
+$$Z\vert{}-\rangle = Z \left( \frac{\vert{}0\rangle - \vert{}1\rangle}{\sqrt{2}} \right) = \frac{Z\vert{}0\rangle - Z\vert{}1\rangle}{\sqrt{2}} = \frac{\vert{}0\rangle - (-\vert{}1\rangle)}{\sqrt{2}} = \frac{\vert{}0\rangle + \vert{}1\rangle}{\sqrt{2}} = \vert{}+\rangle$$
+
 Eigenvectors: $\{\vert{}0\rangle, \vert{}1\rangle\}$ are the eigenvectors of $Z$ corresponding to eigenvalues $+1$ and $-1$, respectively, so the computational basis is also referred to as the **$Z$-basis**.
 
 #### 2.2.3. Hadamard Gate $H$ (Basis Switch)
@@ -313,46 +316,53 @@ $$P(i) = \Vert{}\Pi_i \vert{}\psi\rangle\Vert{}^2 = \langle\psi\vert{} \Pi_i \ve
 
 $$\vert{}\psi'\rangle = \frac{\Pi_i \vert{}\psi\rangle}{\Vert{}\Pi_i \vert{}\psi\rangle\Vert{}}$$
 
-**State collpase ensure probability normalisation:**
+**State collapse ensure probability normalisation:**
 
-$$\langle\psi'|\psi'\rangle = \left(\frac{\Pi_i|\psi\rangle}{\|\Pi_i|\psi\rangle\|}\right)^\dagger \left(\frac{\Pi_i|\psi\rangle}{\|\Pi_i|\psi\rangle\|}\right) = \frac{\langle\psi|\Pi_i^\dagger \Pi_i|\psi\rangle}{\|\Pi_i|\psi\rangle\|^2}$$
+$$\langle\psi'\vert{}\psi'\rangle = \left(\frac{\Pi_i\vert{}\psi\rangle}{\Vert{}\Pi_i\vert{}\psi\rangle\Vert{}}\right)^\dagger \left(\frac{\Pi_i\vert{}\psi\rangle}{\Vert{}\Pi_i\vert{}\psi\rangle\Vert{}}\right) = \frac{\langle\psi\vert{}\Pi_i^\dagger \Pi_i\vert{}\psi\rangle}{\Vert{}\Pi_i\vert{}\psi\rangle\Vert{}^2}$$
 
-  - Applying the **Hermiticity** and **Idempotency** properties of the **Projection Operator** $\Pi_i$, we have:
+Applying the **Hermiticity** and **Idempotency** properties of the **Projection Operator** $\Pi_i$, we have:
 
 $$\Pi_i^\dagger \Pi_i = \Pi_i \cdot \Pi_i = \Pi_i^2 = \Pi_i$$
 
-  - Substituting into the numerator:
+Substituting into the numerator:
 
-$$\langle\psi|\Pi_i^\dagger \Pi_i|\psi\rangle = \langle\psi|\Pi_i|\psi\rangle = \|\Pi_i|\psi\rangle\|^2 = P(i)$$
-  - Thus:
-$$\langle\psi'|\psi'\rangle = \frac{\|\Pi_i|\psi\rangle\|^2}{\|\Pi_i|\psi\rangle\|^2} = \frac{P(i)}{P(i)} = 1$$
-#### 4.4.1.  Non - Degenerate Measurement
+$$\langle\psi\vert{}\Pi_i^\dagger \Pi_i\vert{}\psi\rangle = \langle\psi\vert{}\Pi_i\vert{}\psi\rangle = \Vert{}\Pi_i\vert{}\psi\rangle\Vert{}^2 = P(i)$$
+
+Thus:
+
+$$\langle\psi'\vert{}\psi'\rangle = \frac{\Vert{}\Pi_i\vert{}\psi\rangle\Vert{}^2}{\Vert{}\Pi_i\vert{}\psi\rangle\Vert{}^2} = \frac{P(i)}{P(i)} = 1$$
+
+#### 4.4.1. Non - Degenerate Measurement
+
 1. **Outcome Probability $P(\lambda_n)$:**
-   Substitute $\Pi_n = |u_n\rangle\langle u_n|$ into $P(n) = \langle\psi|\Pi_n|\psi\rangle$:
+   Substitute $\Pi_n = \vert{}u_n\rangle\langle u_n\vert{}$ into $P(n) = \langle\psi\vert{}\Pi_n\vert{}\psi\rangle$:
 
-   $$P(\lambda_n) = \langle\psi|(|u_n\rangle\langle u_n|)|\psi\rangle = \langle\psi|u_n\rangle\langle u_n|\psi\rangle = c_n^* c_n = |c_n|^2 = |\langle u_n|\psi\rangle|^2$$
+   $$P(\lambda_n) = \langle\psi\vert{}(\vert{}u_n\rangle\langle u_n\vert{})\vert{}\psi\rangle = \langle\psi\vert{}u_n\rangle\langle u_n\vert{}\psi\rangle = c_n^* c_n = \vert{}c_n\vert{}^2 = \vert{}\langle u_n\vert{}\psi\rangle\vert{}^2$$
 
-2. **State Collapse $|\psi'\rangle$:**
+2. **State Collapse $\vert{}\psi'\rangle$:**
 
-   $$\Pi_n|\psi\rangle = P_n|\psi\rangle = |u_n\rangle\langle u_n|\psi\rangle = c_n|u_n\rangle$$
+   $$\Pi_n\vert{}\psi\rangle = P_n\vert{}\psi\rangle = \vert{}u_n\rangle\langle u_n\vert{}\psi\rangle = c_n\vert{}u_n\rangle$$
 
-   Substitute $P_n|\psi\rangle$ and $\sqrt{P(\lambda_n)} = |c_n|$ into the collapse formula:
+   Substitute $P_n\vert{}\psi\rangle$ and $\sqrt{P(\lambda_n)} = \vert{}c_n\vert{}$ into the collapse formula:
 
-   $$|\psi'\rangle = \frac{P_n|\psi\rangle}{\sqrt{P(\lambda_n)}} = \frac{c_n|u_n\rangle}{|c_n|} = \left(\frac{c_n}{|c_n|}\right)|u_n\rangle = e^{i\phi}|u_n\rangle \equiv |u_n\rangle$$
+   $$\vert{}\psi'\rangle = \frac{P_n\vert{}\psi\rangle}{\sqrt{P(\lambda_n)}} = \frac{c_n\vert{}u_n\rangle}{\vert{}c_n\vert{}} = \left(\frac{c_n}{\vert{}c_n\vert{}}\right)\vert{}u_n\rangle = e^{i\phi}\vert{}u_n\rangle \equiv \vert{}u_n\rangle$$
+
 #### 4.4.2. Degenerate Measurement
+
 1. **Outcome Probability $P(\lambda_n)$:**
-   Substitute $\Pi_n = \sum_{i=1}^{g_n} |u_n^i\rangle\langle u_n^i|$ into $P(n) = \langle\psi|\Pi_n|\psi\rangle$:
+   Substitute $\Pi_n = \sum_{i=1}^{g_n} \vert{}u_n^i\rangle\langle u_n^i\vert{}$ into $P(n) = \langle\psi\vert{}\Pi_n\vert{}\psi\rangle$:
 
-   $$P(\lambda_n) = \left\langle\psi\left|\left(\sum_{i=1}^{g_n} |u_n^i\rangle\langle u_n^i|\right)\right|\psi\right\rangle = \sum_{i=1}^{g_n} \langle\psi|u_n^i\rangle\langle u_n^i|\psi\rangle = \sum_{i=1}^{g_n} |c_n^i|^2$$
+   $$P(\lambda_n) = \left\langle\psi\left\vert{}\left(\sum_{i=1}^{g_n} \vert{}u_n^i\rangle\langle u_n^i\vert{}\right)\right\vert{}\psi\right\rangle = \sum_{i=1}^{g_n} \langle\psi\vert{}u_n^i\rangle\langle u_n^i\vert{}\psi\rangle = \sum_{i=1}^{g_n} \vert{}c_n^i\vert{}^2$$
 
-2. **State Collapse $|\psi'\rangle$:**
+2. **State Collapse $\vert{}\psi'\rangle$:**
 
-   $$\Pi_n|\psi\rangle = P_n|\psi\rangle = \sum_{i=1}^{g_n} |u_n^i\rangle\langle u_n^i|\psi\rangle = \sum_{i=1}^{g_n} c_n^i |u_n^i\rangle$$
+   $$\Pi_n\vert{}\psi\rangle = P_n\vert{}\psi\rangle = \sum_{i=1}^{g_n} \vert{}u_n^i\rangle\langle u_n^i\vert{}\psi\rangle = \sum_{i=1}^{g_n} c_n^i \vert{}u_n^i\rangle$$
 
-   Substitute into collapse formula with $\sqrt{P(\lambda_n)} = \sqrt{\sum_{i=1}^{g_n} |c_n^i|^2}$:
+   Substitute into collapse formula with $\sqrt{P(\lambda_n)} = \sqrt{\sum_{i=1}^{g_n} \vert{}c_n^i\vert{}^2}$:
 
-   $$|\psi'\rangle = \frac{P_n|\psi\rangle}{\sqrt{P(\lambda_n)}} = \frac{1}{\sqrt{\sum_{i=1}^{g_n} |c_n^i|^2}} \sum_{i=1}^{g_n} c_n^i |u_n^i\rangle$$
+   $$\vert{}\psi'\rangle = \frac{P_n\vert{}\psi\rangle}{\sqrt{P(\lambda_n)}} = \frac{1}{\sqrt{\sum_{i=1}^{g_n} \vert{}c_n^i\vert{}^2}} \sum_{i=1}^{g_n} c_n^i \vert{}u_n^i\rangle$$
 
+---
 
 ## 5. Quantum Entanglement
 
@@ -414,6 +424,8 @@ $$\vert{}\psi\rangle = \frac{\vert{}00\rangle + \vert{}11\rangle}{\sqrt{2}}$$
 - To send **10** (Apply $X$): $X\vert{}\psi\rangle = \frac{\vert{}10\rangle + \vert{}01\rangle}{\sqrt{2}}$
 - To send **11** (Apply $iY$): $iY\vert{}\psi\rangle = \frac{\vert{}01\rangle - \vert{}10\rangle}{\sqrt{2}}$
 
+---
+
 ## 6. Quantum Mixed States
 
 ### 6.1. Mixed States
@@ -422,103 +434,86 @@ A mixed state represents an ensemble comprising a statistical mixture of pure st
 
 ### 6.2. Density Operator
 
-When measuring an observable $\hat{A}$ in mixed states, the outcome can be calculated manually by combining classical statistical probability with quantum mechanics. The total probability of measuring the eigenvalue $\lambda_i$ (corresponding to the eigenstate $|u_i\rangle$) is:
+When measuring an observable $\hat{A}$ in mixed states, the outcome can be calculated manually by combining classical statistical probability with quantum mechanics. The total probability of measuring the eigenvalue $\lambda_i$ (corresponding to the eigenstate $\vert{}u_i\rangle$) is:
 
-$$P(\lambda_i) = \sum_n p_n P(\lambda_i|\psi_n) = \sum_n p_n |\langle u_i|\psi_n\rangle|^2 =  \sum_n p_n |c_i|^2$$
+$$P(\lambda_i) = \sum_n p_n P(\lambda_i\vert{}\psi_n) = \sum_n p_n \vert{}\langle u_i\vert{}\psi_n\rangle\vert{}^2 = \sum_n p_n \vert{}c_i\vert{}^2$$
 
-Note that the density operator $\hat{\rho}$ is not used to "recover" the coefficients $c_i$; rather, it allows you to directly calculate the measurement probability without needing to know the details of each individual $c_i$ or $p_n$.
+When using the density operator $\hat{\rho} = \sum_n p_n \vert{}\psi_n\rangle\langle\psi_n\vert{}$, the entire calculation above is simplified into a single operation:
 
-When using the density operator $\hat{\rho} = \sum_n p_n |\psi_n\rangle\langle\psi_n|$, the entire calculation above is simplified into a single operation:
-
-$$P(\lambda_i) = \langle u_i|\hat{\rho}|u_i\rangle$$
+$$P(\lambda_i) = \langle u_i\vert{}\hat{\rho}\vert{}u_i\rangle$$
 
 #### 6.2.1. Pure Quantum States
 
-- Density Operator: 
-  $$\hat{\rho} =  |\psi\rangle \langle\psi|$$
-The matrix elements $\rho_{ij}$ of the density operator $\hat{\rho}$ in the basis $\{|u_i\rangle\}$:
+- Density Operator:
+$$\hat{\rho} = \vert{}\psi\rangle \langle\psi\vert{}$$
 
-$$\rho_{ij} = \langle u_i | \hat{\rho} | u_j \rangle = \langle u_i | \Big( |\psi\rangle\langle\psi| \Big) | u_j \rangle = \langle u_i | \psi \rangle \langle \psi | u_j \rangle = c_i c_j^*$$
+The matrix elements $\rho_{ij}$ of the density operator $\hat{\rho}$ in the basis $\{\vert{}u_i\rangle\}$:
 
+$$\rho_{ij} = \langle u_i \vert{} \hat{\rho} \vert{} u_j \rangle = \langle u_i \vert{} \Big( \vert{}\psi\rangle\langle\psi\vert{} \Big) \vert{} u_j \rangle = \langle u_i \vert{} \psi \rangle \langle \psi \vert{} u_j \rangle = c_i c_j^*$$
 
-- Density Matrix Representation
-$$\hat{\rho} = \begin{pmatrix} c_1 c_1^* & c_1 c_2^* & \dots \\ c_2 c_1^* & c_2 c_2^* & \dots \\ \vdots & \vdots & \ddots \end{pmatrix} = |\psi\rangle \langle\psi|$$
-- Unit Trace Condition: 
-  State vector: $\langle\psi|\psi\rangle = 1$
+- Density Matrix Representation:
+$$\hat{\rho} = \begin{pmatrix} c_1 c_1^* & c_1 c_2^* & \dots \\ c_2 c_1^* & c_2 c_2^* & \dots \\ \vdots & \vdots & \ddots \end{pmatrix} = \vert{}\psi\rangle \langle\psi\vert{}$$
 
-  $$\langle\psi|\psi\rangle = \left(\sum_i c_i^* \langle u_i|\right) \left(\sum_j c_j |u_j\rangle\right) = \sum_{i,j} c_i^* c_j \underbrace{\langle u_i|u_j\rangle}_{\delta_{ij}} = \sum_i |c_i|^2$$
-  Density operator
+- Unit Trace Condition:
+$$\rho_{ii} = \vert{}c_i\vert{}^2$$
 
-$$\rho_{ii} = |c_i|^2$$
+$$1 = \sum_i \vert{}c_i\vert{}^2 = \sum_i \rho_{ii} = \operatorname{Tr}(\hat{\rho})$$
 
-$$1 = \sum_i |c_i|^2 = \sum_i \rho_{ii} = \operatorname{Tr}(\hat{\rho})$$
+$$1 = \langle\psi\vert{}\psi\rangle \iff 1 = \operatorname{Tr}(\hat{\rho})$$
 
-$$1 = \langle\psi|\psi\rangle \iff 1 = \operatorname{Tr}(\hat{\rho})$$
 #### 6.2.2. Mixed Quantum States
 
 - Density Operator:
 $$\hat{\rho} = \sum_k p_k \hat{\rho}_k = \sum_k p_k \vert{}\psi_k\rangle\langle\psi_k\vert{} \quad (p_k \ge 0, \, \sum_k p_k = 1)$$
 
 - Matrix Elements: $\rho_{ij} = \sum_k p_k \langle u_i \vert{} \psi_k \rangle \langle \psi_k \vert{} u_j \rangle$
-- Unit Trace Condition:
-  Pure state: $\operatorname{Tr}(\hat{\rho}_k) = 1$
 
+- Unit Trace Condition:
 $$\operatorname{Tr}(\hat{\rho}) = \operatorname{Tr}\left( \sum_k p_k \hat{\rho}_k \right) = \sum_k p_k \underbrace{\operatorname{Tr}(\hat{\rho}_k)}_{= 1} = \sum_k p_k = 1$$
+
 #### 6.2.3. Distinguishing state type:
+
 - **Pure state**: 
-  $$\hat{\rho}_k^2 = |\psi\rangle \underbrace{\langle\psi|\psi\rangle}_{=1} \langle\psi| = |\psi\rangle\langle\psi| = \hat{\rho}_k$$
-  $$\operatorname{Tr}(\hat{\rho}_k^2) = 1$$
+$$\hat{\rho}_k^2 = \vert{}\psi\rangle \underbrace{\langle\psi\vert{}\psi\rangle}_{=1} \langle\psi\vert{} = \vert{}\psi\rangle\langle\psi\vert{} = \hat{\rho}_k$$
+
+$$\operatorname{Tr}(\hat{\rho}_k^2) = 1$$
 
 - **Mixed state**: 
-  - $\hat{\rho} = \sum_k p_k \hat{\rho}_k = \sum_k p_k |\psi_k\rangle\langle\psi_k|$
 
-  - $$\begin{aligned}
-   \hat{\rho}^2 &= \left(\sum_k p_k \hat{\rho}_k\right) \left(\sum_l p_l \hat{\rho}_l\right) = \sum_{k,l} p_k p_l |\psi_k\rangle \underbrace{\langle\psi_k|\psi_l\rangle}_{\delta_{kl}} \langle\psi_l| \\
-&= \sum_k p_k^2 |\psi_k\rangle\langle\psi_k| = \sum_k p_k^2 \hat{\rho}_k \neq \hat{\rho} \quad \text{(not a projection operator)}
-\end{aligned}$$
+$$\begin{aligned} \hat{\rho}^2 &= \left(\sum_k p_k \hat{\rho}_k\right) \left(\sum_l p_l \hat{\rho}_l\right) = \sum_{k,l} p_k p_l \vert{}\psi_k\rangle \underbrace{\langle\psi_k\vert{}\psi_l\rangle}_{\delta_{kl}} \langle\psi_l\vert{} \\ &= \sum_k p_k^2 \vert{}\psi_k\rangle\langle\psi_k\vert{} = \sum_k p_k^2 \hat{\rho}_k \neq \hat{\rho} \end{aligned}$$
 
-  - $$\operatorname{Tr}(\hat{\rho}^2) = \operatorname{Tr}\left(\sum_k p_k^2 \hat{\rho}_k\right) = \sum_k p_k^2 \underbrace{\operatorname{Tr}(\hat{\rho}_k)}_{= 1} = \sum_k p_k^2 < 1$$
+$$\operatorname{Tr}(\hat{\rho}^2) = \operatorname{Tr}\left(\sum_k p_k^2 \hat{\rho}_k\right) = \sum_k p_k^2 \underbrace{\operatorname{Tr}(\hat{\rho}_k)}_{= 1} = \sum_k p_k^2 < 1$$
 
-$$(\sum_k p_k = 1 \implies 0 \leqslant p_k < 1 \implies p_k^2 < p_k)$$
+Therefore: $\hat{\rho}^2 \neq \hat{\rho}$, $\operatorname{Tr}(\hat{\rho}^2) < 1$.
 
-  - Therefore: $\hat{\rho}^2 \neq \hat{\rho}$, $\operatorname{Tr}(\hat{\rho}^2) < 1$
-#### 6.3.4. Density operator application:
-The total probability of measuring the eigenvalue $\lambda_i$ (corresponding to the eigenstate $|u_i\rangle$) is:
-
-$$P(\lambda_i) = \sum_n p_n P(\lambda_i|\psi_n) = \sum_n p_n |\langle u_i|\psi_n\rangle|^2 =  \sum_n p_n |c_i|^2$$
-
-When using the density operator $\hat{\rho} = \sum_n p_n |\psi_n\rangle\langle\psi_n|$, the entire calculation above is simplified into a single operation:
-
-$$P(\lambda_i) = \langle u_i|\hat{\rho}|u_i\rangle$$
 ### 6.3. Partial Trace and Reduced Density Operator
-The deepest application of the density operator is as a descriptive tool for subsystems of a composite quantum system, such a description is provided by the reduced density operator.
 
-Suppose we have physical systems $A$ and $B$, whose state is described by a density operator $\rho^{AB}$. The reduced density operator for system $A$ is defined by
+Suppose we have physical systems $A$ and $B$, whose state is described by a density operator $\rho^{AB}$. The reduced density operator for system $A$ is defined by:
 
 $$\rho^A \equiv \operatorname{tr}_B(\rho^{AB})$$
 
-where $\operatorname{tr}_B$ is a map of operators known as the *partial trace* over system $B$. The partial trace is defined by
+where $\operatorname{tr}_B$ is a map of operators known as the *partial trace* over system $B$. The partial trace is defined by:
 
-$$\operatorname{tr}_B \left( |a_1\rangle\langle a_2| \otimes |b_1\rangle\langle b_2| \right) \equiv |a_1\rangle\langle a_2| \operatorname{tr}\left( |b_1\rangle\langle b_2| \right) \equiv |a_1\rangle\langle a_2| \langle b_2|b_1\rangle$$
+$$\operatorname{tr}_B \left( \vert{}a_1\rangle\langle a_2\vert{} \otimes \vert{}b_1\rangle\langle b_2\vert{} \right) \equiv \vert{}a_1\rangle\langle a_2\vert{} \operatorname{tr}\left( \vert{}b_1\rangle\langle b_2\vert{} \right) \equiv \vert{}a_1\rangle\langle a_2\vert{} \langle b_2\vert{}b_1\rangle$$
 
-where $|a_1\rangle$ and $|a_2\rangle$ are any two vectors in the state space of $A$, and $|b_1\rangle$ and $|b_2\rangle$ are any two vectors in the state space of $B$.
+where $\vert{}a_1\rangle$ and $\vert{}a_2\rangle$ are any two vectors in the state space of $A$, and $\vert{}b_1\rangle$ and $\vert{}b_2\rangle$ are any two vectors in the state space of $B$.
+
 **Remark:**
 * $\operatorname{tr}(\rho_A) = \operatorname{tr}_A(\operatorname{tr}_B(\rho_{AB})) = \operatorname{tr}_{AB}(\rho_{AB}) = 1$
 * $\rho_A$ contains all information accessible by measurements performed only on $A$.
 * Information about correlations with $B$ is generally lost.
 
+**Example:**
 
-**Example**
+A less trivial example is the Bell state $(\vert{}00\rangle + \vert{}11\rangle)/\sqrt{2}$. This has density operator:
 
-A less trivial example is the Bell state $(|00\rangle + |11\rangle)/\sqrt{2}$. This has density operator
+$$\rho = \left( \frac{\vert{}00\rangle + \vert{}11\rangle}{\sqrt{2}} \right) \left( \frac{\langle 00\vert{} + \langle 11\vert{}}{\sqrt{2}} \right) = \frac{\vert{}00\rangle\langle 00\vert{} + \vert{}11\rangle\langle 00\vert{} + \vert{}00\rangle\langle 11\vert{} + \vert{}11\rangle\langle 11\vert{}}{2}$$
 
-$$\rho = \left( \frac{|00\rangle + |11\rangle}{\sqrt{2}} \right) \left( \frac{\langle 00| + \langle 11|}{\sqrt{2}} \right) = \frac{|00\rangle\langle 00| + |11\rangle\langle 00| + |00\rangle\langle 11| + |11\rangle\langle 11|}{2}$$
+Tracing out the second qubit, we find the reduced density operator of the first qubit:
 
-Tracing out the second qubit, we find the reduced density operator of the first qubit,
+$$\rho^1 = \operatorname{tr}_2(\rho) = \frac{\operatorname{tr}_2(\vert{}00\rangle\langle 00\vert{}) + \operatorname{tr}_2(\vert{}11\rangle\langle 00\vert{}) + \operatorname{tr}_2(\vert{}00\rangle\langle 11\vert{}) + \operatorname{tr}_2(\vert{}11\rangle\langle 11\vert{})}{2}$$
 
-$$\rho^1 = \operatorname{tr}_2(\rho) = \frac{\operatorname{tr}_2(|00\rangle\langle 00|) + \operatorname{tr}_2(|11\rangle\langle 00|) + \operatorname{tr}_2(|00\rangle\langle 11|) + \operatorname{tr}_2(|11\rangle\langle 11|)}{2} $$
-
-$$ = \frac{|0\rangle\langle 0|\langle 0|0\rangle + |1\rangle\langle 0|\langle 0|1\rangle + |0\rangle\langle 1|\langle 1|0\rangle + |1\rangle\langle 1|\langle 1|1\rangle}{2} = \frac{|0\rangle\langle 0| + |1\rangle\langle 1|}{2} = \frac{I}{2}. $$
+$$= \frac{\vert{}0\rangle\langle 0\vert{}\langle 0\vert{}0\rangle + \vert{}1\rangle\langle 0\vert{}\langle 0\vert{}1\rangle + \vert{}0\rangle\langle 1\vert{}\langle 1\vert{}0\rangle + \vert{}1\rangle\langle 1\vert{}\langle 1\vert{}1\rangle}{2} = \frac{\vert{}0\rangle\langle 0\vert{} + \vert{}1\rangle\langle 1\vert{}}{2} = \frac{I}{2}$$
 
 Notice that this state $\rho^1$ is a *mixed state*, since $\operatorname{tr}((I/2)^2) = 1/2 < 1$.
 
@@ -526,46 +521,52 @@ Notice that this state $\rho^1$ is a *mixed state*, since $\operatorname{tr}((I/
 
 #### 6.4.1. Evolution of Mixed States
 
-The evolution of a closed quantum system is described by the unitary operator $U$. If the system was initially in the state $|\psi_i\rangle$ with probability $p_i$ then after the evolution has occurred the system will be in the state $U|\psi_i\rangle$ with probability $p_i$. Thus, the evolution of the density operator is described by the equation
+The evolution of a closed quantum system is described by the unitary operator $U$. If the system was initially in the state $\vert{}\psi_i\rangle$ with probability $p_i$ then after the evolution has occurred the system will be in the state $U\vert{}\psi_i\rangle$ with probability $p_i$. Thus, the evolution of the density operator is described by the equation:
 
-$$\rho = \sum_i p_i |\psi_i\rangle\langle\psi_i| \xrightarrow{U} \sum_i p_i U |\psi_i\rangle\langle\psi_i| U^\dagger = U \rho U^\dagger$$
+$$\rho = \sum_i p_i \vert{}\psi_i\rangle\langle\psi_i\vert{} \xrightarrow{U} \sum_i p_i U \vert{}\psi_i\rangle\langle\psi_i\vert{} U^\dagger = U \rho U^\dagger$$
 
 #### 6.4.2. Measurements of Mixed States
 
-**Postulate 3:** Quantum measurements are described by a collection $\{M_m\}$ of *measurement operators*. These are operators acting on the state space of the system being measured. The index $m$ refers to the measurement outcomes that may occur in the experiment. If the state of the quantum system is $\rho$ immediately before the measurement then the probability that result $m$ occurs is given by
+**Postulate 3:** Quantum measurements are described by a collection $\{M_m\}$ of *measurement operators*. These are operators acting on the state space of the system being measured. The index $m$ refers to the measurement outcomes that may occur in the experiment. If the state of the quantum system is $\rho$ immediately before the measurement then the probability that result $m$ occurs is given by:
 
 $$p(m) = \operatorname{tr}(M_m^\dagger M_m \rho)$$
 
-and the state of the system after the measurement is
+and the state of the system after the measurement is:
 
 $$\frac{M_m \rho M_m^\dagger}{\operatorname{tr}(M_m^\dagger M_m \rho)}$$
 
-The measurement operators satisfy the *completeness equation*,
+The measurement operators satisfy the *completeness equation*:
 
 $$\sum_m M_m^\dagger M_m = I$$
-##### 6.4.2.1. Projective measurement using density operator
-- *Properties of projective measurement*: 
-$$P = \sum_{i=1}^{k} |\psi_i\rangle\langle\psi_i|       (Degenerate Subspace)$$
-$$\hat{P}_\psi = |\psi\rangle\langle\psi| (No Degeneracy)$$
 
-  - *Idempotent*
+##### 6.4.2.1. Projective measurement using density operator
+
+- Properties of projective measurement:
+
+$$P = \sum_{i=1}^{k} |\psi_i\rangle\langle\psi_i| \quad (\text{Degenerate Subspace})$$
+
+$$\hat{P}_\psi = |\psi\rangle\langle\psi| \quad (\text{No Degeneracy})$$
+
+- Idempotent:
+
 $$\hat{P}_\psi^2 = (|\psi\rangle\langle\psi|)(|\psi\rangle\langle\psi|) = |\psi\rangle \underbrace{(\langle\psi|\psi\rangle)}_{= 1} \langle\psi| = |\psi\rangle\langle\psi| = \hat{P}_\psi$$
 
-  - Hermitian
+- Hermitian:
+
 $$\hat{P}_\psi^\dagger = (|\psi\rangle\langle\psi|)^\dagger = |\psi\rangle\langle\psi| = \hat{P}_\psi$$
 
 By substituting $M_m = P_m$ into the composite operator $M_m^\dagger M_m$, applying **Hermiticity** ($P_m^\dagger = P_m$) and **Idempotency** ($P_m^2 = P_m$):
 
-$$M_m^\dagger M_m = P_m^\dagger P_m = P_m \cdot P_m = P_m^2= P_m$$
+$$M_m^\dagger M_m = P_m^\dagger P_m = P_m \cdot P_m = P_m^2 = P_m$$
 
-Substituting $M_m^\dagger M_m = P_m$ into the ***general probability formula*** from Postulate 3:
+Substituting $M_m^\dagger M_m = P_m$ into the **general probability formula** from Postulate 3:
 
 $$p(m) = \operatorname{Tr}\left(M_m^\dagger M_m \rho\right) \xrightarrow{\quad M_m^\dagger M_m = P_m \quad} p(m) = \operatorname{Tr}\left(P_m \rho\right)$$
 
-Substituting $M_m = P_m$ and $M_m^\dagger = P_m$ into the ***state collapse formula***:
+Substituting $M_m = P_m$ and $M_m^\dagger = P_m$ into the **state collapse formula**:
 
-$$\rho' = \frac{M_m \rho M_m^\dagger}{\operatorname{Tr}\left(M_m^\dagger M_m \rho\right)} = \frac{P_m \rho P_m^\dagger}{\operatorname{Tr}\left(P_m \rho\right)} = \frac{P_m \rho P_m}{\operatorname{Tr}\left(P_m \rho\right)} $$
+$$\rho' = \frac{M_m \rho M_m^\dagger}{\operatorname{Tr}\left(M_m^\dagger M_m \rho\right)} = \frac{P_m \rho P_m^\dagger}{\operatorname{Tr}\left(P_m \rho\right)} = \frac{P_m \rho P_m}{\operatorname{Tr}\left(P_m \rho\right)}$$
 
-Substituting $M_m^\dagger M_m = P_m$ into the ***general completeness condition:***
+Substituting $M_m^\dagger M_m = P_m$ into the **general completeness condition**:
 
 $$\sum_m M_m^\dagger M_m = I \xrightarrow{\quad M_m^\dagger M_m = P_m \quad} \sum_m P_m = I$$
