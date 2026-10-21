@@ -28,9 +28,9 @@ $$\vert{}0\rangle = \begin{pmatrix} 1 \\ 0 \end{pmatrix}, \quad \vert{}1\rangle 
 
 * **Hadamard basis:**
 
-$$\vert{}+\rangle = \begin{pmatrix} \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} \end{pmatrix} = \frac{1}{\sqrt{2}}(\vert{}0\rangle + \vert{}1\rangle)$$
+$$\vert{}+\rangle = \begin{pmatrix} \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} \end{pmatrix} = \frac{1}{\sqrt{2}}(\vert{}0\rangle  +  \vert{}1\rangle)$$
 
-$$\vert{}-\rangle = \begin{pmatrix} \frac{1}{\sqrt{2}} \\ -\frac{1}{\sqrt{2}} \end{pmatrix} = \frac{1}{\sqrt{2}}(\vert{}0\rangle - \vert{}1\rangle)$$
+$$\vert{}-\rangle = \begin{pmatrix} \frac{1}{\sqrt{2}} \\ -\frac{1}{\sqrt{2}} \end{pmatrix} = \frac{1}{\sqrt{2}}(\vert{}0\rangle  -  \vert{}1\rangle)$$
 
 * Measuring a qubit we get either the result 0, with probability $\vert{}\alpha\vert{}^2$, or the result 1, with probability $\vert{}\beta\vert{}^2$ (Quantum Measurement).
 
@@ -508,7 +508,8 @@ where $\vert{}a_1\rangle$ and $\vert{}a_2\rangle$ are any two vectors in the sta
 
 **Remark:**
 
-* $\operatorname{tr}(\rho_A) = \operatorname{tr}_A(\operatorname{tr}_B(\rho_{AB})) = \operatorname{tr}_{AB}(\rho_{AB}) = 1$
+$$\operatorname{tr}(\rho_A) = \operatorname{tr}_A(\operatorname{tr}_B(\rho_{AB})) = \operatorname{tr}_{AB}(\rho_{AB}) = 1$$
+
 * $\rho_A$ contains all information accessible by measurements performed only on $A$.
 * Information about correlations with $B$ is generally lost.
 
